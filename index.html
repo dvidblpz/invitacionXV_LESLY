@@ -103,33 +103,7 @@
       </div>
     </section>
 
-    <!-- Minijuego interactivo: Atrapa las estrellas -->
-    <section class="section-shell star-game-section" id="juego" aria-labelledby="starGameTitle">
-      <p class="eyebrow">Un poco de magia para ti</p>
-      <h2 id="starGameTitle">Atrapa las estrellas</h2>
-      <p class="section-intro">Ayuda a reunir estrellas mágicas antes de que termine el tiempo. ¡Mueve la cesta con el dedo o usa las flechas del teclado!</p>
-      <div class="star-game-card">
-        <div class="star-game-hud" aria-live="polite">
-          <span>✨ Puntos: <strong id="starScore">0</strong></span>
-          <span>⏳ Tiempo: <strong id="starTime">25</strong>s</span>
-          <span>🎯 Meta: <strong id="starGoal">50</strong></span>
-          <span>🔥 Racha: <strong id="starCombo">x1</strong></span>
-        </div>
-        <div class="star-game-progress" role="progressbar" aria-label="Progreso hacia la meta" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="starProgress">
-          <span id="starProgressFill"></span>
-        </div>
-        <p class="star-game-hint">✨ Estrella dorada: +1 · 💜 Estrella mágica: +3 · Atrapa varias seguidas para aumentar tu racha.</p>
-        <canvas id="starGameCanvas" class="star-game-canvas" width="800" height="420" tabindex="0" role="application" aria-label="Juego Atrapa las estrellas. Usa las flechas izquierda y derecha para mover la cesta, o arrastra con el dedo en pantalla táctil."></canvas>
-        <div class="star-game-controls">
-          <button class="button button-gold" id="starGameStart" type="button">Comenzar a jugar</button>
-          <button class="button button-outline" id="starGameLeft" type="button" aria-label="Mover cesta a la izquierda">←</button>
-          <button class="button button-outline" id="starGameRight" type="button" aria-label="Mover cesta a la derecha">→</button>
-        </div>
-        <p id="starGameMessage" class="star-game-message" role="status" aria-live="polite">Cada estrella cuenta. ¿Listo para la magia?</p>
-      </div>
-    </section>
-
-    <!-- Confirmación de asistencia -->
+       <!-- Confirmación de asistencia -->
     <section class="section-shell rsvp-section">
       <p class="eyebrow">Tu presencia es mi mejor regalo</p>
       <h2>¿Me acompañas?</h2>
@@ -162,6 +136,33 @@
       <p class="script-name">Lesly</p>
       <p>Una noche, un sueño y mil recuerdos por comenzar.</p>
       <small>Invitación digital creada con cariño por Dulce Invitación</small>
+
+       <!-- Minijuego interactivo: Atrapa las estrellas -->
+    <section class="section-shell star-game-section" id="juego" aria-labelledby="starGameTitle">
+      <p class="eyebrow">Un poco de magia para ti</p>
+      <h2 id="starGameTitle">Atrapa las estrellas</h2>
+      <p class="section-intro">Ayuda a reunir estrellas mágicas antes de que termine el tiempo. ¡Mueve la cesta con el dedo o usa las flechas del teclado!</p>
+      <div class="star-game-card">
+        <div class="star-game-hud" aria-live="polite">
+          <span>✨ Puntos: <strong id="starScore">0</strong></span>
+          <span>⏳ Tiempo: <strong id="starTime">25</strong>s</span>
+          <span>🎯 Meta: <strong id="starGoal">50</strong></span>
+          <span>🔥 Racha: <strong id="starCombo">x1</strong></span>
+        </div>
+        <div class="star-game-progress" role="progressbar" aria-label="Progreso hacia la meta" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="starProgress">
+          <span id="starProgressFill"></span>
+        </div>
+        <p class="star-game-hint">✨ Estrella dorada: +1 · 💜 Estrella mágica: +3 · Atrapa varias seguidas para aumentar tu racha.</p>
+        <canvas id="starGameCanvas" class="star-game-canvas" width="800" height="420" tabindex="0" role="application" aria-label="Juego Atrapa las estrellas. Usa las flechas izquierda y derecha para mover la cesta, o arrastra con el dedo en pantalla táctil."></canvas>
+        <div class="star-game-controls">
+          <button class="button button-gold" id="starGameStart" type="button">Comenzar a jugar</button>
+          <button class="button button-outline" id="starGameLeft" type="button" aria-label="Mover cesta a la izquierda">←</button>
+          <button class="button button-outline" id="starGameRight" type="button" aria-label="Mover cesta a la derecha">→</button>
+        </div>
+        <p id="starGameMessage" class="star-game-message" role="status" aria-live="polite">Cada estrella cuenta. ¿Listo para la magia?</p>
+      </div>
+    </section>
+      
       <!-- Enlace oficial a la página de Facebook de Dulce Invitación -->
       <a class="social-link" href="https://www.facebook.com/DDInvitacion/" target="_blank" rel="noopener noreferrer" aria-label="Visita Dulce Invitación en Facebook">
         <span aria-hidden="true">f</span> Síguenos en Facebook
