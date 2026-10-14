@@ -127,6 +127,114 @@ h3 { font:500 1.6rem/1.15 var(--serif); color:var(--lilac-light); margin:8px 0 1
 @media (max-width:380px) { .date-panel { gap:9px; padding:16px 7px; }.date-number { font-size:3.4rem; }.date-copy,.time-copy { font-size:.6rem; }.date-copy strong,.time-copy strong { font-size:.75rem; }.countdown { gap:5px; }.countdown div { padding:14px 2px; }.countdown strong { font-size:1.85rem; }.countdown span { font-size:.47rem; letter-spacing:.03em; }.music-toggle { right:8px; bottom:8px; padding:9px 12px; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
 
+/* Código de vestimenta — Dulce Invitación */
+.dress-code {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: clamp(32px, 6vw, 64px) 22px;
+  margin: 42px auto;
+  border: 1px solid rgba(240, 207, 131, 0.65);
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(132, 87, 157, 0.30),
+      transparent 65%
+    ),
+    rgba(39, 16, 52, 0.88);
+  box-shadow:
+    0 12px 35px rgba(12, 3, 22, 0.20),
+    inset 0 0 25px rgba(240, 207, 131, 0.04);
+  color: #fff4e8;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.dress-code__eyebrow {
+  margin: 0 0 10px;
+  color: #f0cf83;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.dress-code h2 {
+  margin: 0;
+  color: #fff4e8;
+  font-family: Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 400;
+}
+
+.dress-code__ornament {
+  margin: 14px 0;
+  color: #f0cf83;
+  letter-spacing: 0.25em;
+}
+
+.dress-code__icon {
+  width: 72px;
+  height: 72px;
+  margin: 24px auto 16px;
+  display: grid;
+  place-items: center;
+  color: #f0cf83;
+  border: 1px solid rgba(240, 207, 131, 0.65);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.dress-code__icon svg {
+  width: 42px;
+  height: 42px;
+}
+
+.dress-code__label {
+  margin: 0 0 5px;
+  color: #d8c6e5;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+}
+
+.dress-code__style {
+  margin: 0;
+  color: #f0cf83;
+  font-family: Georgia, serif;
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
+  font-style: italic;
+}
+
+.dress-code__description {
+  max-width: 440px;
+  margin: 16px auto 0;
+  color: #eadfee;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+  .dress-code {
+    margin: 28px 14px;
+    padding: 34px 18px;
+  }
+
+  .dress-code__description {
+    font-size: 0.94rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dress-code,
+  .dress-code * {
+    scroll-behavior: auto;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
 /* Confirmación de asistencia y generación local del boleto */
 .rsvp-dialog { width:min(92vw,480px); max-width:none; border:1px solid var(--gold); border-radius:20px; padding:0; color:var(--white); background:rgba(28,12,43,.98); box-shadow:0 24px 90px rgba(0,0,0,.55); }
 .rsvp-dialog::backdrop { background:rgba(9,3,17,.78); backdrop-filter:blur(6px); }
