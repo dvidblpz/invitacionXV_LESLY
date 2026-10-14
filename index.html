@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#241038">
+  <meta name="description" content="Acompáñanos a celebrar los XV años de Lesly Itzayana Peña García el 14 de noviembre de 2026.">
+  <meta property="og:title" content="Los XV años de Lesly">
+  <meta property="og:description" content="Una noche mágica de cuento de hadas. 14 de noviembre de 2026, 8:00 p. m.">
+  <title>Mis XV Años | Lesly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <!-- Decoración ambiental: destellos generados con CSS -->
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <!-- Pantalla inicial de bienvenida -->
+  <section class="splash" id="splash">
+    <div class="splash-card">
+      <p class="eyebrow">Una noche de cuento</p>
+      <div class="crown" aria-hidden="true">♕</div>
+      <p class="small-title">Mis XV años</p>
+      <h1 class="script-name">Lesly</h1>
+      <p class="quote">“Hoy comienza una nueva ilusión, y tu presencia hará más especial mi celebración.”</p>
+      <button class="button button-gold" id="startButton" type="button">Comenzar ✨</button>
+      <p class="tiny-note">Con cariño, te espero para celebrar conmigo.</p>
+    </div>
+  </section>
+
+  <!-- Contenido principal; aparece después de pulsar Comenzar -->
+  <main id="invitation" class="invitation is-hidden">
+    <header class="hero section-shell" id="inicio">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="castle-silhouette" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <p class="eyebrow">Una celebración mágica</p>
+      <div class="ornament" aria-hidden="true">✦ ── ♕ ── ✦</div>
+      <p class="small-title">Mis XV Años</p>
+      <h1 class="script-name">Lesly</h1>
+      <p class="full-name">Itzayana Peña García</p>
+      <p class="hero-message">Tengo el honor de invitarte a compartir una noche llena de magia, amor y sueños.</p>
+      <div class="date-panel" aria-label="Sábado 14 de noviembre de 2026 a las 8 de la noche">
+        <div class="date-number">14</div>
+        <div class="date-copy"><span>NOVIEMBRE</span><strong>2026</strong></div>
+        <div class="date-divider"></div>
+        <div class="time-copy"><span>SÁBADO</span><strong>8:00 P. M.</strong></div>
+      </div>
+      <a href="#detalles" class="scroll-link">DESLIZA PARA DESCUBRIR <span aria-hidden="true">⌄</span></a>
+    </header>
+
+    <!-- Cuenta regresiva calculada desde JavaScript -->
+    <section class="countdown-section section-shell">
+      <p class="eyebrow">El reloj del reino</p>
+      <h2>Falta muy poco para la magia</h2>
+      <div class="countdown" aria-label="Cuenta regresiva">
+        <div><strong id="days">--</strong><span>DÍAS</span></div>
+        <div><strong id="hours">--</strong><span>HORAS</span></div>
+        <div><strong id="minutes">--</strong><span>MINUTOS</span></div>
+        <div><strong id="seconds">--</strong><span>SEGUNDOS</span></div>
+      </div>
+    </section>
+
+    <!-- Datos familiares -->
+    <section class="section-shell family-section" id="detalles">
+      <p class="eyebrow">Con la bendición de</p>
+      <h2>Mi familia</h2>
+      <div class="family-grid">
+        <article class="glass-card"><span class="card-icon">❦</span><h3>Mis padres</h3><p>María Concepción<br>García Rodríguez</p><p class="ampersand">&</p><p>Leopoldo Peña<br>Maldonado</p></article>
+        <article class="glass-card"><span class="card-icon">✧</span><h3>Mis padrinos</h3><p>Luis Aaron Peña<br>Maldonado</p><p class="ampersand">&</p><p>María Griselda Maldonado<br>Covarrubias</p></article>
+      </div>
+    </section>
+
+    <!-- Lugar de recepción -->
+    <section class="section-shell location-section">
+      <p class="eyebrow">El lugar de la celebración</p>
+      <h2>Te espero en la recepción</h2>
+      <div class="glass-card location-card">
+        <div class="location-icon" aria-hidden="true">⌖</div>
+        <h3>Recepciones San Antonio</h3>
+        <p>Bulevar Cedros y Bulevar Revolución</p>
+        <p>Colonia Mirasierra, s/n</p>
+        <p class="location-time">14 de noviembre de 2026 · 8:00 p. m.</p>
+        <!-- El enlace se configura en script.js cuando se tenga la ubicación exacta -->
+        <div class="location-buttons">
+          <button class="button button-outline" id="calendarButton" type="button">Agregar al calendario</button>
+          <a class="button button-outline" id="mapsButton" href="https://www.google.com/maps/search/?api=1&query=Recepciones+San+Antonio+Bulevar+Cedros+Bulevar+Revolucion+Mirasierra" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+          <a class="button button-outline" id="wazeButton" href="https://www.waze.com/ul?q=Recepciones%20San%20Antonio%2C%20Bulevar%20Cedros%20y%20Bulevar%20Revoluci%C3%B3n%2C%20Colonia%20Mirasierra&navigate=yes" target="_blank" rel="noopener noreferrer">Llegar con Waze</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería: sustituir los archivos de ejemplo por las 10 fotos cuando estén disponibles -->
+    <section class="section-shell gallery-section" id="fotos">
+      <p class="eyebrow">Recuerdos de mi historia</p>
+      <h2>Galería de Lesly</h2>
+      <p class="section-intro">Explora mis recuerdos favoritos: toca una fotografía para verla en grande y recorrer la galería.</p>
+      <div class="gallery-grid" id="galleryGrid" aria-label="Galería de fotografías de Lesly">
+        <!-- Las imágenes se insertan desde script.js; por ahora son espacios reservados -->
+      </div>
+    </section>
+
+    <!-- Minijuego interactivo: Atrapa las estrellas -->
+    <section class="section-shell star-game-section" id="juego" aria-labelledby="starGameTitle">
+      <p class="eyebrow">Un poco de magia para ti</p>
+      <h2 id="starGameTitle">Atrapa las estrellas</h2>
+      <p class="section-intro">Ayuda a reunir estrellas mágicas antes de que termine el tiempo. ¡Mueve la cesta con el dedo o usa las flechas del teclado!</p>
+      <div class="star-game-card">
+        <div class="star-game-hud" aria-live="polite">
+          <span>✨ Puntos: <strong id="starScore">0</strong></span>
+          <span>⏳ Tiempo: <strong id="starTime">25</strong>s</span>
+          <span>🎯 Meta: <strong id="starGoal">50</strong></span>
+          <span>🔥 Racha: <strong id="starCombo">x1</strong></span>
+        </div>
+        <div class="star-game-progress" role="progressbar" aria-label="Progreso hacia la meta" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="starProgress">
+          <span id="starProgressFill"></span>
+        </div>
+        <p class="star-game-hint">✨ Estrella dorada: +1 · 💜 Estrella mágica: +3 · Atrapa varias seguidas para aumentar tu racha.</p>
+        <canvas id="starGameCanvas" class="star-game-canvas" width="800" height="420" tabindex="0" role="application" aria-label="Juego Atrapa las estrellas. Usa las flechas izquierda y derecha para mover la cesta, o arrastra con el dedo en pantalla táctil."></canvas>
+        <div class="star-game-controls">
+          <button class="button button-gold" id="starGameStart" type="button">Comenzar a jugar</button>
+          <button class="button button-outline" id="starGameLeft" type="button" aria-label="Mover cesta a la izquierda">←</button>
+          <button class="button button-outline" id="starGameRight" type="button" aria-label="Mover cesta a la derecha">→</button>
+        </div>
+        <p id="starGameMessage" class="star-game-message" role="status" aria-live="polite">Cada estrella cuenta. ¿Listo para la magia?</p>
+      </div>
+    </section>
+
+    <!-- Confirmación de asistencia -->
+    <section class="section-shell rsvp-section">
+      <p class="eyebrow">Tu presencia es mi mejor regalo</p>
+      <h2>¿Me acompañas?</h2>
+      <p>Confirma tu asistencia para compartir esta noche tan especial.</p>
+      <button class="button button-gold" id="rsvpButton" type="button">Confirmar asistencia y generar boleto</button>
+      <p class="tiny-note">¡Me hará muy feliz celebrar contigo!</p>
+    </section>
+
+    <dialog class="rsvp-dialog" id="rsvpDialog" aria-labelledby="rsvpTitle">
+      <form id="rsvpForm" class="rsvp-form">
+        <button class="lightbox-close" id="rsvpClose" type="button" aria-label="Cerrar formulario">×</button>
+        <p class="eyebrow">Una noche inolvidable</p>
+        <h2 id="rsvpTitle">Confirma tu asistencia</h2>
+        <p>Completa tus datos para generar tu boleto digital en PDF.</p>
+        <label for="guestName">Nombre del invitado</label>
+        <input id="guestName" name="guestName" autocomplete="name" maxlength="90" required>
+        <label for="guestCount">Personas incluidas en este boleto</label>
+        <select id="guestCount" name="guestCount">
+          <option value="1">1 persona</option><option value="2">2 personas</option>
+          <option value="3">3 personas</option><option value="4">4 personas</option>
+          <option value="5">5 personas</option>
+        </select>
+        <button class="button button-gold" type="submit">Aceptar y descargar boleto PDF</button>
+        <p class="tiny-note">Guarda el PDF y preséntalo al llegar. Este boleto se genera en tu dispositivo.</p>
+      </form>
+    </dialog>
+
+    <footer class="footer">
+      <div class="ornament" aria-hidden="true">✦ ── ♕ ── ✦</div>
+      <p class="script-name">Lesly</p>
+      <p>Una noche, un sueño y mil recuerdos por comenzar.</p>
+      <small>Invitación digital creada con cariño por Dulce Invitación</small>
+      <!-- Enlace oficial a la página de Facebook de Dulce Invitación -->
+      <a class="social-link" href="https://www.facebook.com/DDInvitacion/" target="_blank" rel="noopener noreferrer" aria-label="Visita Dulce Invitación en Facebook">
+        <span aria-hidden="true">f</span> Síguenos en Facebook
+      </a>
+      <a class="back-top" href="#inicio">Volver al inicio ↑</a>
+    </footer>
+  </main>
+
+  <!-- Música de fondo: coloca el archivo musical en audio/musica-princesa.mp3 -->
+  <audio id="backgroundMusic" loop preload="none">
+    <source src="audio/musica-princesa.mp3" type="audio/mpeg">
+    Tu navegador no admite audio HTML5.
+  </audio>
+  <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Activar música">
+    <span aria-hidden="true">♫</span><span id="musicToggleLabel">Activar música</span>
+  </button>
+
+  <!-- Visor accesible para abrir fotos en grande -->
+  <dialog class="lightbox" id="lightbox" aria-label="Fotografía ampliada">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar fotografía">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Fotografía anterior">‹</button>
+    <figure><img id="lightboxImage" alt=""><figcaption id="lightboxCaption"></figcaption><div class="lightbox-actions"><a id="lightboxDownload" class="lightbox-action" href="#" download="recuerdo-lesly.jpg"><span aria-hidden="true">↓</span> Guardar foto</a><button id="lightboxShare" class="lightbox-action" type="button"><span aria-hidden="true">↗</span> Compartir</button></div></figure>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Fotografía siguiente">›</button>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
