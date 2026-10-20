@@ -287,3 +287,30 @@ input, textarea, select, [contenteditable="true"] { -webkit-user-select:text; us
 img { height: auto; }
 .gallery-grid img { content-visibility: auto; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto !important; } }
+
+
+/* Preferencia de regalo: tarjeta elegante en lila y dorado */
+.gift-section { padding-top: 28px; padding-bottom: 28px; }
+.gift-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(30px, 6vw, 56px) clamp(20px, 5vw, 48px);
+  border: 1px solid rgba(240, 207, 131, .68);
+  border-radius: 24px;
+  background: radial-gradient(ellipse at 50% 20%, rgba(169, 120, 222, .22), transparent 60%), linear-gradient(145deg, rgba(53, 25, 72, .94), rgba(23, 8, 36, .97));
+  box-shadow: 0 16px 44px rgba(0, 0, 0, .2), inset 0 0 28px rgba(240, 207, 131, .035);
+}
+.gift-ornament { color: var(--gold); letter-spacing: .22em; font-size: .9rem; }
+.gift-icon {
+  display: grid; place-items: center; width: 66px; height: 66px; margin: 20px auto 16px;
+  border: 1px solid var(--border); border-radius: 50%; color: var(--gold);
+  background: rgba(255, 255, 255, .035); font-size: 2.2rem;
+}
+.gift-eyebrow { margin: 0 0 10px; color: var(--gold); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; }
+.gift-card h2 { margin: 0; color: var(--gold-light); font-size: clamp(1.8rem, 5vw, 2.7rem); }
+.gift-description { max-width: 530px; margin: 18px auto 0; color: var(--lilac-light); font: 1.15rem/1.65 var(--serif); }
+.gift-thanks { margin: 18px auto 20px; color: var(--gold); font: italic 1.1rem/1.5 var(--serif); }
+@media (max-width: 480px) { .gift-section { padding-top: 20px; padding-bottom: 20px; } .gift-card { border-radius: 18px; } .gift-description { font-size: 1.05rem; } }
+@media (prefers-reduced-motion: reduce) { .gift-card, .gift-card * { animation: none !important; transition: none !important; } }
