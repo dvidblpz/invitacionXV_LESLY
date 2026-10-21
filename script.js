@@ -13,7 +13,7 @@ const CONFIG = {
   wazeUrl: "https://www.waze.com/ul?q=Recepciones%20San%20Antonio%2C%20Bulevar%20Cedros%20y%20Bulevar%20Revoluci%C3%B3n%2C%20Colonia%20Mirasierra&navigate=yes",
   // Cuando te entreguen las fotos, escribe aquí las rutas relativas, por ejemplo:
   // photos: ["images/lesly-01.jpg", "images/lesly-02.jpg"]
-  photos: ["images/lesly-01.jpg", "images/lesly-02.jpg", "images/lesly-03.jpg", "images/lesly-04.jpg"]
+  photos: ["images/lesly-02.jpg", "images/lesly-03.jpg", "images/lesly-04.jpg"]
 };
 
 const $ = (selector) => document.querySelector(selector);
