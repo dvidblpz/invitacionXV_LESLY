@@ -61,15 +61,41 @@ a { color: inherit; }
 .is-hidden { display:none !important; }
 .section-shell { width:min(calc(100% - 34px),var(--content)); margin-inline:auto; text-align:center; padding:clamp(48px,8vw,88px) 0; }
 .hero { min-height:min(920px,100svh); min-height:max(720px,92svh); display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; isolation:isolate; overflow:hidden; padding-top:70px; padding-bottom:58px; }
-.hero::before { content:""; position:absolute; inset:2% 0 3%; z-index:-3; border:1px solid rgba(240,207,131,.25); border-radius:48% 48% 18px 18px; background:radial-gradient(ellipse at 50% 38%,rgba(169,120,222,.22),transparent 57%); }
-.hero-glow { position:absolute; width:260px; height:260px; border-radius:50%; background:rgba(185,133,232,.18); filter:blur(65px); z-index:-2; }
-/* Castillo dibujado con CSS: no requiere imágenes pesadas ni descargas externas. */
-.castle-silhouette { position:absolute; z-index:-1; bottom:5%; left:50%; transform:translateX(-50%); width:min(92%,650px); height:220px; opacity:.28; pointer-events:none; filter:drop-shadow(0 0 16px rgba(240,207,131,.2)); }
-.castle-silhouette::before { content:""; position:absolute; bottom:0; left:10%; right:10%; height:72px; border:1px solid rgba(240,207,131,.5); border-bottom:0; background:linear-gradient(180deg,rgba(142,95,184,.22),rgba(20,8,32,.1)); clip-path:polygon(0 100%,0 40%,8% 40%,8% 22%,13% 22%,13% 40%,23% 40%,23% 10%,29% 10%,29% 40%,38% 40%,38% 0,62% 0,62% 40%,71% 40%,71% 10%,77% 10%,77% 40%,87% 40%,87% 22%,92% 22%,92% 40%,100% 40%,100% 100%); }
-.castle-silhouette span { position:absolute; bottom:50px; width:52px; height:120px; border:1px solid rgba(240,207,131,.5); background:linear-gradient(180deg,rgba(133,81,169,.2),rgba(17,7,27,.12)); }
-.castle-silhouette span::before { content:""; position:absolute; top:-30px; left:-1px; width:calc(100% + 2px); height:30px; background:rgba(240,207,131,.2); border:1px solid rgba(240,207,131,.5); clip-path:polygon(50% 0,100% 100%,0 100%); }
-.castle-silhouette span:nth-child(1) { left:12%; height:115px; }.castle-silhouette span:nth-child(2) { left:28%; height:82px; width:44px; }.castle-silhouette span:nth-child(3) { left:calc(50% - 26px); height:150px; width:52px; }.castle-silhouette span:nth-child(4) { right:28%; height:82px; width:44px; }.castle-silhouette span:nth-child(5) { right:12%; height:115px; }
-.ornament { color:var(--gold); letter-spacing:.25em; margin:12px 0; }
+
+/* Fondo fotográfico exclusivo del encabezado de la invitación */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 2% 0 3%;
+  z-index: -3;
+  border: 1px solid rgba(240, 207, 131, 0.35);
+  border-radius: 48% 48% 18px 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(30, 12, 47, 0.48) 0%,
+      rgba(30, 12, 47, 0.68) 55%,
+      rgba(16, 7, 27, 0.82) 100%
+    ),
+    url("images/fondo-hero-lesly.webp");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  box-shadow:
+    inset 0 0 50px rgba(240, 207, 131, 0.08),
+    0 0 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Evita que el fondo fijo del sitio afecte el desplazamiento móvil */
+@media (max-width: 600px) {
+  .hero::before {
+    background-position: center center;
+  }
+}
+
 .hero .script-name { font-size:clamp(5rem,19vw,9rem); }
 .full-name { font:italic clamp(1.3rem,4vw,2rem) var(--serif); margin:-4px 0 18px; }
 .hero-message { color:var(--muted); max-width:460px; padding:0 14px; font:1.2rem/1.4 var(--serif); }

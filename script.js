@@ -7,13 +7,13 @@ const CONFIG = {
   eventDate: new Date(2026, 10, 14, 20, 0, 0),
   // Completa el teléfono en formato internacional, solo dígitos y sin +.
   // Ejemplo de México: 528441234567. Se deja vacío hasta recibir el número correcto.
-  whatsappNumber: "8443811681",
+  whatsappNumber: "8441751398",
   whatsappMessage: "¡Hola! Quiero confirmar mi asistencia a los XV años de Lesly Itzayana Peña García, el sábado 14 de noviembre de 2026 a las 8:00 p. m.",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Recepciones+San+Antonio+Bulevar+Cedros+Bulevar+Revolucion+Mirasierra",
   wazeUrl: "https://www.waze.com/ul?q=Recepciones%20San%20Antonio%2C%20Bulevar%20Cedros%20y%20Bulevar%20Revoluci%C3%B3n%2C%20Colonia%20Mirasierra&navigate=yes",
   // Cuando te entreguen las fotos, escribe aquí las rutas relativas, por ejemplo:
   // photos: ["images/lesly-01.jpg", "images/lesly-02.jpg"]
-  photos: ["images/lesly-02.jpg", "images/lesly-03.jpg", "images/lesly-04.jpg"]
+  photos: ["images/lesly-01.jpg", "images/lesly-02.jpg", "images/lesly-03.jpg", "images/lesly-04.jpg"]
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -109,7 +109,7 @@ $("#calendarButton").addEventListener("click", () => {
 function buildGallery() {
   galleryGrid.replaceChildren();
   galleryPhotos = CONFIG.photos.filter(Boolean);
-  for (let index = 0; index < 10; index += 1) {
+  for (let index = 0; index < 4; index += 1) {
     const source = CONFIG.photos[index];
     if (source) {
       const button = document.createElement("button");
@@ -399,27 +399,36 @@ rsvpForm.addEventListener("submit", async (event) => {
     drawTicket(backgroundData, null);
     pdf.save(`Boleto-XV-Lesly-${safeName}.pdf`);
     rsvpDialog.close();
-    sendWhatsAppConfirmation(guestName, ticketId);
+    sendWhatsAppConfirmation(guestName, ticketId, guestCount);
   }).catch((error) => {
     console.error("No se pudo cargar el fondo del boleto:", error);
     // El boleto sigue disponible con diseño alternativo si falla un recurso externo/local.
     drawTicket(null, null);
     pdf.save(`Boleto-XV-Lesly-${safeName}.pdf`);
     rsvpDialog.close();
-    sendWhatsAppConfirmation(guestName, ticketId);
+    sendWhatsAppConfirmation(guestName, ticketId, guestCount);
   });
 });
 
-function sendWhatsAppConfirmation(guestName, ticketId) {
-  const whatsappNumber = CONFIG.whatsappNumber.replace(/\\D/g, "");
+
+function sendWhatsAppConfirmation(guestName, ticketId, guestCount) {
+  const whatsappNumber = CONFIG.whatsappNumber.replace(/\D/g, "");
+
   if (whatsappNumber.length < 10) {
-    alert("El boleto se descargó. Para enviar la confirmación por WhatsApp, configura CONFIG.whatsappNumber en script.js con el teléfono de la familia (código de país y solo dígitos).");
+    alert("El boleto se descargó, pero falta configurar el teléfono de WhatsApp.");
     return;
   }
-  const message = `¡Hola! Confirmo que asistiré a los XV años de Lesly Itzayana Peña García el sábado 14 de noviembre de 2026 a las 8:00 p. m.\\nInvitado: ${guestName}.\\nFolio del boleto: ${ticketId}.`;
+
+  const message =
+    `¡Hola! Confirmo que asistiré a los XV años de Lesly Itzayana Peña García el sábado 14 de noviembre de 2026 a las 8:00 p. m.\n` +
+    `Invitado: ${guestName}.\n` +
+    `Cantidad de personas: ${guestCount}.\n` +
+    `Folio del boleto: ${ticketId}.`;
+
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank", "noopener,noreferrer");
 }
+
 
 // Control de música. No interrumpe la navegación si el archivo MP3 aún no está agregado.
 function setMusicState(isPlaying) {
